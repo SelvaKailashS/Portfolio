@@ -2,9 +2,9 @@
 
 A classical-antiquity themed portfolio website — stone, parchment, gold leaf, and laurel motifs — built for a Computer Science & Engineering student who works across software and embedded hardware.
 
-**Live demo:** _add your Vercel URL here after deploying_
+**Live site:** [portfolio96.vercel.app](https://portfolio96.vercel.app)
 
-![Theme](https://img.shields.io/badge/theme-ancient%20%2F%20classical-c9a227) ![Stack](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-2b2420)
+![Theme](https://img.shields.io/badge/theme-ancient%20%2F%20classical-c9a227) ![Stack](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-2b2420) ![Deployed on Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black?logo=vercel)
 
 ---
 
@@ -54,11 +54,27 @@ No build tools, package installs, or servers required — it's a static site.
 
 ---
 
-## ✦ Deploying to Vercel
+## ✦ Deployment
 
-### Option A — Import from GitHub (recommended)
+This site is **live on Vercel** at [portfolio96.vercel.app](https://portfolio96.vercel.app), connected directly to this GitHub repository.
 
-1. Push this project to a GitHub repository:
+**Auto-deploy is already active:**
+- Every push to `main` triggers a new **production** deployment automatically — no manual steps needed.
+- Pushes to any other branch, or opening a pull request, generate a separate **preview deployment** with its own URL, so changes can be checked before merging.
+- Deployment status and logs are visible on the [Vercel dashboard](https://vercel.com/dashboard).
+
+**Workflow to publish a change:**
+```bash
+git add .
+git commit -m "your change"
+git push
+```
+Vercel picks it up within seconds since this is a static site with no build step.
+
+<details>
+<summary>Setting this up from scratch on a new repo</summary>
+
+1. Push the project to a GitHub repository:
    ```bash
    git init
    git add .
@@ -68,24 +84,21 @@ No build tools, package installs, or servers required — it's a static site.
    git push -u origin main
    ```
 2. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
-3. Click **Add New → Project**, then select your repository.
-4. Vercel will detect it as a static site automatically:
+3. Click **Add New → Project**, then select the repository.
+4. Vercel auto-detects it as a static site:
    - **Framework Preset:** Other
    - **Build Command:** _(leave blank)_
    - **Output Directory:** _(leave blank, or `.`)_
-5. Click **Deploy**. Vercel will give you a live URL (e.g. `your-repo.vercel.app`) within seconds.
+5. Click **Deploy**.
 
-Every future push to `main` will auto-redeploy.
-
-### Option B — Deploy via Vercel CLI
-
+Or via CLI:
 ```bash
 npm install -g vercel
 cd <your-repo>
-vercel
+vercel        # preview deploy
+vercel --prod # production deploy
 ```
-
-Follow the prompts (link to your Vercel account, confirm project settings), and it will deploy immediately. Run `vercel --prod` to push to your production URL.
+</details>
 
 ---
 
