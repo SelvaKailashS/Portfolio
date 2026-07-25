@@ -116,5 +116,5 @@ vercel --prod # production deploy
 Personal portfolio — feel free to fork for inspiration, but please don't republish the content as your own.
 
 ---
-
-Built by **Selva Kailash S** · Tirunelveli, India
+👤 Author
+Selva Kailash S — @SelvaKailashS
